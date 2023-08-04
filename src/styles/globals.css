@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body{
-  @apply bg-AlmostWhite;
+  @apply bg-AlmostWhite min-w-[375px] min-h-[800px];
   font-family: Epilogue;
   font-weight: 500;
 }

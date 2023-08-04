@@ -9,6 +9,10 @@ export default {
         MediumGray: "hsl(0, 0%, 41%)",
         AlmostBlack: "hsl(0, 0%, 8%)",
       },
+      backgroundImage: {
+        mobile: "url('/assets/image-hero-mobile.png')",
+        desktop: "url('/assets/image-hero-desktop.png')",
+      },
     },
   },
   plugins: [],
