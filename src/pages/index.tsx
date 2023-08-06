@@ -1,9 +1,30 @@
 import Head from "next/head"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 import { Button } from "~/components/Button"
 import Logos from "~/components/Logos"
+import { MobileMenu } from "~/components/MobileMenu"
+
+import {
+  ArrowDownIcon,
+  CloseMenuIcon,
+  MenuIcon,
+} from "~/components/icons/Icons"
 
 export default function Home() {
+  const [toggleMenu, setToggleMenu] = useState<boolean>(true)
+
+  const handleResize = (event: Event): void => {
+    const target = event.target as Window
+    if (target.innerWidth <= 768) return
+    setToggleMenu(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
   return (
     <>
       <Head>
@@ -27,40 +48,53 @@ export default function Home() {
             <ul className="  hidden items-center space-x-6 md:flex">
               <li className="flex items-center space-x-2">
                 <label>Features</label>
-                <Image
-                  width={10}
-                  height={6}
-                  src="/assets/icon-arrow-down.svg"
-                  alt="arrow"
-                  aria-hidden={true}
-                />
+                <ArrowDownIcon />
               </li>
               <li className="flex items-center space-x-2">
                 <label>Careers</label>
-                <Image
-                  width={10}
-                  height={6}
-                  src="/assets/icon-arrow-down.svg"
-                  alt="arrow"
-                  aria-hidden={true}
-                />
+                <ArrowDownIcon />
               </li>
               <li>About</li>
             </ul>
           </div>
           <ul className=" hidden items-center space-x-8 md:flex">
+            <li className="hidden md:block">Login</li>
             <li className="hidden md:block">
-              <li className="hidden md:block">Login</li>
+              <Button text={"Register"} />
             </li>
-            <Button text={"Register"} />
           </ul>
-          <Image
-            width={32}
-            height={18}
-            src="assets/icon-menu.svg"
-            alt="logo"
-            className="md:hidden"
+          <div
+            className="cursor-pointer transition-all  hover:scale-110 md:hidden"
+            onClick={() => setToggleMenu(true)}
+          >
+            <MenuIcon />
+          </div>
+          <div
+            className={`
+            ${
+              toggleMenu
+                ? "pointer-events-auto opacity-70"
+                : "pointer-events-none opacity-0"
+            }
+            fixed left-0 top-0 z-10 h-[100dvh] w-[100vw] bg-AlmostBlack transition-all duration-300
+                `}
+            onClick={() => setToggleMenu(false)}
           />
+          <div
+            className={`
+              ${toggleMenu ? "translate-x-0" : " translate-x-[100%]"}
+              fixed right-0 top-0 z-20 h-[100dvh] min-h-[500px] w-[75vw] max-w-[250px] overflow-y-scroll bg-AlmostWhite p-4 text-MediumGray transition-transform duration-300`}
+          >
+            <div className="flex h-16 w-full items-start justify-end p-2">
+              <div
+                className="cursor-pointer transition-all hover:scale-110"
+                onClick={() => setToggleMenu(false)}
+              >
+                <CloseMenuIcon />
+              </div>
+            </div>
+            <MobileMenu />
+          </div>
         </nav>
         <section className="mx-auto min-h-[700px] max-w-[375px]">
           <div className="min-h-[284px] bg-mobile bg-cover bg-no-repeat md:bg-desktop" />
