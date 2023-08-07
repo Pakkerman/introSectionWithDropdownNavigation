@@ -1,9 +1,9 @@
 ## Logs and stuff
 
 ### Solution Requirements
-- [ ] Dropdown menus on desktop and mobile when interacting with the navigation links
-- [ ] Optimal layout for the content depending on their device's screen size
-- [ ] Hover states for all interactive elements on the page
+- [x] Dropdown menus on desktop and mobile when interacting with the navigation links
+- [x] Optimal layout for the content depending on their device's screen size
+- [x] Hover states for all interactive elements on the page
 
 ### Modifications
 
@@ -18,10 +18,6 @@
 ### Styling
 - [x] Mobile Layout
 - [ ] Desktop Layout
-
-
-### Issues
-
 
 
 ### Refactors 

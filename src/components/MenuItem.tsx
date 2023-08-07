@@ -75,13 +75,15 @@ export const MenuItem = ({ label, subItems = [], mode }: SubMenuProps) => {
             <ArrowUpIcon />
           </div>
         </div>
-        {open && (
-          <div className="absolute z-20 min-h-min space-y-4 rounded-lg bg-AlmostWhite px-8 py-6 shadow-xl ">
-            {subItems.map((item, idx) => (
-              <SubItem key={idx} label={item} />
-            ))}
-          </div>
-        )}
+        <div
+          className={`
+          ${open ? "opacity-100" : "pointer-events-none opacity-0"} absolute
+          z-20 min-h-min space-y-4 rounded-lg bg-AlmostWhite px-8 py-6 drop-shadow-2xl  transition-all`}
+        >
+          {subItems.map((item, idx) => (
+            <SubItem key={idx} label={item} />
+          ))}
+        </div>
         {/* This is bit of a hack, using a transparent backdrop that cover the screen to act as click away,
         so that when user is not clicking within the subitem frame it will close */}
         {open && (

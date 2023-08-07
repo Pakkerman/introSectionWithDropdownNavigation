@@ -1,28 +1,33 @@
-# Create T3 App
+# Frontend Mentor - Expenses chart component solution
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## What's next? How do I make an app with this?
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+### Solution Requirements
+- [x] Dropdown menus on desktop and mobile when interacting with the navigation links
+- [x] Optimal layout for the content depending on their device's screen size
+- [x] Hover states for all interactive elements on the page
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### Modifications
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+### Tasks
+- [x] Top Navbar for desktop
+- [x] Drop downs for sub items
+- [x] Side menu bar for mobile
+- [x] Toggleable sub items in mobile menu
 
-## Learn More
+### Styling
+- [x] Mobile Layout
+- [X] Desktop Layout
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Links
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- [Github repo](https://github.com/Pakkerman/introSectionWithDropdownNavigation)
+- [Deployed on Vercel](https://intro-section-with-dropdown-navigation-vert.vercel.app/)
 
-## How do I deploy this?
+### Built with
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- [Create T3 App](https://create.t3.gg/)
+- Style with [TailwindCSS](https://tailwindcss.com/)
+

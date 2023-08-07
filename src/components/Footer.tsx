@@ -1,18 +1,18 @@
-import React from "react"
-
-function Footer() {
+export const Footer = () => {
   return (
-    <div className="attribution w-full pb-2 pt-6">
+    <div className="w-full pb-2 pt-6 text-center text-xs text-MediumGray">
       Challenge by{" "}
       <a
-        href="https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt"
+        className="text-AlmostBlack hover:text-orange-500"
+        href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5"
         target="_blank"
       >
         Frontend Mentor
       </a>{" "}
       Coded by{" "}
       <a
-        href="https://github.com/Pakkerman/expensesChartComponent"
+        className="text-AlmostBlack hover:text-orange-500"
+        href="https://github.com/Pakkerman/introSectionWithDropdownNavigation"
         target="_blank"
       >
         Pakkerman
@@ -20,5 +20,3 @@ function Footer() {
     </div>
   )
 }
-
-export default Footer
