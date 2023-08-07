@@ -8,11 +8,12 @@
 ### Modifications
 
 ### Tasks
-- [x] Top menu bar for desktop
-  - [ ] Drop downs
-  - [ ] Login and register button
-- [x] Side menu bar for mobile
-  - [x] Toggleable submenu items
+- #### Navigation Bar
+  - [x] Top menu bar for desktop
+    - [x] Drop downs
+    - [x] Login and register button
+  - [x] Side menu bar for mobile
+    - [x] Toggleable submenu items
 
 ### Styling
 - [x] Mobile Layout
